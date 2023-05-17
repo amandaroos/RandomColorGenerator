@@ -54,25 +54,9 @@ fun RandomColorScreen() {
             modifier = Modifier
                 .fillMaxSize()
                 .background(backgroundColor),
-            verticalArrangement = Arrangement.Bottom
+            verticalArrangement = Arrangement.Center
         ) {
-//            Text(
-//                text = "Hex value: ${backgroundColor.toHex()}",
-//                textAlign = TextAlign.Center,
-//                style = TextStyle(color = Color.White),
-//                modifier = Modifier
-//                    .fillMaxWidth()
-//                    .padding(8.dp)
-//            )
-//
-//            Text(
-//                text = "RGB value: ${backgroundColor.toRgb()}",
-//                textAlign = TextAlign.Center,
-//                style = TextStyle(color = Color.White),
-//                modifier = Modifier
-//                    .fillMaxWidth()
-//                    .padding(16.dp)
-//            )
+            Spacer(modifier = Modifier.height(96.dp))
 
             Button(
                 onClick = {
@@ -103,7 +87,7 @@ fun RandomColorScreen() {
                     contentDescription = null,
                     modifier = Modifier.padding(8.dp)
                 )
-                Text(text = "Hex $hexValue",
+                Text(text = hexValue,
                     style = TextStyle(color = Color.White),)
             }
 
@@ -120,10 +104,9 @@ fun RandomColorScreen() {
                     contentDescription = null,
                     modifier = Modifier.padding(8.dp)
                 )
-                Text(text = "RGB $RGBValue",
+                Text(text = "$RGBValue",
                     style = TextStyle(color = Color.White),)
             }
-            Spacer(modifier = Modifier.height(64.dp))
         }
     }
 }
